@@ -76,13 +76,69 @@ public:
         cout<<"[Stored] "<<variable<<endl;}};
 //Displaying Command
 class DisplayCommand : public Command
-{};
+{
+private:
+    string variable;
+public:
+    DisplayCommand(string v)
+    {variable = v;}
+    void execute(map<string,Variable>& variables)
+    {if(variables.find(variable)==variables.end())
+        {throw runtime_error("Variable Not Found");}
+     Variable obj = variables[variable];
+     cout<<variable<<" = ";
+     if(obj.datatype=="int")
+        {cout<<obj.intValue;}
+     else if(obj.datatype=="float")
+        {cout<<obj.floatValue;}
+     else if(obj.datatype=="bool")
+    {if(obj.boolValue==true){cout<<"true";}
+     else{cout<<"false";}}
+     else if(obj.datatype=="string")
+        {cout<<obj.stringValue;}
+        cout<<endl;}
+    };
 //DELETE COMMAND
 class DeleteCommand : public Command
-{};
+{
+private:
+    string variable;
+public:
+    DeleteCommand(string v)
+    {variable = v;}
+    void execute(map<string,Variable>& variables)
+    {if(variables.find(variable)==variables.end())
+        {throw runtime_error("Variable Not Found");}
+     variables.erase(variable);
+        cout<<variable<<" Deleted Successfully"<<endl;}
+};
 //UPDATE COMMAND
 class UpdateCommand : public Command
-{};
+{
+private:
+    string variable;
+    string newValue;
+public:
+    UpdateCommand(string v,string val)
+    {variable = v;
+     newValue = val;}
+    void execute(map<string,Variable>& variables)
+    {if(variables.find(variable)==variables.end())
+        {throw runtime_error("Variable Not Found");}
+     Variable &obj = variables[variable];
+     if(obj.datatype=="int")
+        {obj.intValue = stoi(newValue);}
+     else if(obj.datatype=="float")
+        {obj.floatValue = stof(newValue);}
+     else if(obj.datatype=="bool")
+        {if(newValue=="true")
+            {obj.boolValue = true;}
+         else
+            {obj.boolValue = false;}}
+     else if(obj.datatype=="string")
+        {obj.stringValue = newValue;}
+     cout<<variable<<" Updated Successfully"<<endl;}
+    };
 //Increase Value of Variable
 class IncreaseCommand : public Command
 {};
