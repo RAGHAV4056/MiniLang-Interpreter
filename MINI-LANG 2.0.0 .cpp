@@ -279,7 +279,9 @@ class ShowVarsCommand : public Command
         cout<<"=====================\n";}};
 //COUNT VARIABLES COMMAND
 class CountVarsCommand : public Command
-{};
+{public:
+    void execute(map<string,Variable>& variables)
+    {cout<<"\nTotal Variables : "<<variables.size()<<endl;}};
 //CLEAR ALL VARIABLES
 class ClearVarsCommand : public Command
 {};
