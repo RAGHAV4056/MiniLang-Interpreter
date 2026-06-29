@@ -284,7 +284,10 @@ class CountVarsCommand : public Command
     {cout<<"\nTotal Variables : "<<variables.size()<<endl;}};
 //CLEAR ALL VARIABLES
 class ClearVarsCommand : public Command
-{};
+{public:
+    void execute(map<string,Variable>& variables)
+    {variables.clear();
+     cout<<"All Variables Deleted Successfully."<<endl;}};
 //TYPE COMMAND
 class TypeCommand : public Command
 {private:
