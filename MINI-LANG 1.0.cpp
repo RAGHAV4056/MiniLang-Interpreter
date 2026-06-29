@@ -344,6 +344,18 @@ public:
              cout<<"help"<<endl;
              cout<<"exit"<<endl;
              cout<<"======================================================"<<endl;}
+else if(tokens[0]=="about")
+            {cout<<endl<<"========================================="<<endl;
+             cout<<"MiniLang Interpreter"<<endl;
+             cout<<"Version : 1.1.0"<<endl;
+             cout<<"Language : C++"<<endl;
+             cout<<"Project Type : Command Based Interpreter"<<endl;
+             cout<<"Supports:"<<endl;
+             cout<<"- Integer"<<endl;
+             cout<<"- Float"<<endl;
+             cout<<"- Boolean"<<endl;
+             cout<<"- String"<<endl;
+             cout<<"========================================="<<endl;}
         //Invalid Command
         else
         {cout<<"Invalid Command"<<endl;}}
