@@ -8,6 +8,33 @@ PATCH.
 - MINOR version for backward-compatible feature additions.
 - PATCH version for bug fixes and minor improvements.
 ---
+# [2.0.0] - MAJOR FEATURE RELEASE
+## Added
+- Added `countvars` command to display the total number of variables.
+- Added `clearvars` command to remove all stored variables.
+- Added `type` command to display the datatype of a variable.
+- Added `copy` command to duplicate an existing variable into a new variable.
+- Updated Help Command to include newly added commands.
+- Improved variable management capabilities.
+## IMPROVED
+- Enhanced usability of the interpreter.
+- Better command organization and documentation.
+- Improved user interaction through additional utility commands.
+---
+# [1.1.0] - ENHANCED USER-EXPERIENCE RELEASE
+## ADDED
+- Added `help` command to display all available commands.
+- Added `about` command to display interpreter information.
+- Added improved exit message.
+## IMPROVED
+- Improved command discoverability.
+- Improved console output formatting.
+- Improved user guidance through help documentation.
+- Enhanced readability of interpreter messages.
+## FIXED
+- Minor command validation improvements.
+- Better handling of invalid commands.
+---
 # [1.0.0] - INITITAL RELEASE
 ## ADDED
 - Variable creation using `store`.
@@ -45,4 +72,3 @@ Planned for future releases:
 - Save and load variables from files.
 - String utility operations.
 - Advanced parser enhancements.
----

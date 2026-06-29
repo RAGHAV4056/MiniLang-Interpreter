@@ -287,8 +287,7 @@ class ClearVarsCommand : public Command
 {public:
     void execute(map<string,Variable>& variables)
     {variables.clear();
-     cout<<"All Variables Deleted Successfully."<<endl;}
-};
+     cout<<"All Variables Deleted Successfully."<<endl;}};
 //TYPE COMMAND
 class TypeCommand : public Command
 {private:
