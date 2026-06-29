@@ -1,26 +1,12 @@
 # CHANGELOG
-All notable changes to MiniLang will be documented in this file.  
+All notable changes to MiniLang will be documented in this file.
 The project follows semantic versioning:  
 MAJOR.  
 MINOR.  
-PATCH.  
+PATCH.
 - MAJOR version for incompatible or significant feature additions.
 - MINOR version for backward-compatible feature additions.
 - PATCH version for bug fixes and minor improvements.
----
-# [1.1.0] - ENHANCED USER-EXPERIENCE RELEASE
-## ADDED
-- Added `help` command to display all available commands.
-- Added `about` command to display interpreter information.
-- Added improved exit message.
-## IMPROVED
-- Improved command discoverability.
-- Improved console output formatting.
-- Improved user guidance through help documentation.
-- Enhanced readability of interpreter messages.
-## FIXED
-- Minor command validation improvements.
-- Better handling of invalid commands.
 ---
 # [1.0.0] - INITITAL RELEASE
 ## ADDED
@@ -59,3 +45,4 @@ Planned for future releases:
 - Save and load variables from files.
 - String utility operations.
 - Advanced parser enhancements.
+---
